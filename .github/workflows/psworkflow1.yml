@@ -8,6 +8,8 @@ jobs:
     name: Run Script
     runs-on: self-hosted, Windows, x64
     steps:
-      uses: actions/checkout@v2
-      run: ./mypsscript1.ps1
-      shell: powershell
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run PowerShell script
+        shell: powershell
+        run: ./mypsscript1.ps1
