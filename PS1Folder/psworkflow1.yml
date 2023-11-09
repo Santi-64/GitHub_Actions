@@ -1,1 +1,12 @@
  # This is my poweshell workflow yaml file
+
+name: Powershell Test 1 (Osric)
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    name: Run Script
+    runs-on: self-hosted, Windows, x64
+    steps:
+      uses: actions/checkout@v2
+      run: ./mypsscript1.ps1
